@@ -15,9 +15,9 @@
                 <TextBlock Margin="170,0,0,0" FontSize="16">Products</TextBlock>
             </StackPanel>
             <StackPanel Orientation="Horizontal" >
-                <TextBox Name="tb3" Margin="10" MinWidth="130"></TextBox>
-                <TextBox Name="tb4" Margin="10" MinWidth="130"></TextBox>
-                <TextBox Name="tb5" Margin="10" MinWidth="130"></TextBox>
+                <TextBox Name="tb3" Margin="10" MinWidth="130" MaxWidth="130"></TextBox>
+                <TextBox Name="tb4" Margin="10" MinWidth="130" MaxWidth="130"></TextBox>
+                <TextBox Name="tb5" Margin="10" MinWidth="130" MaxWidth="130"></TextBox>
                 <ListBox Name="all" Margin="10" MinWidth="320" MinHeight="150" SelectionChanged="all_SelectionChanged"></ListBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal" >

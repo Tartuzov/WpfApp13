@@ -35,14 +35,14 @@ namespace WpfApp13
             emp.name = tb3.Text;
             bool t = true;
             for (int i = 0; i < tb4.Text.Length; i++)
-                if (tb4.Text[i] < 48 || tb4.Text[i] > 57)
+                if (tb4.Text[i] != 46 || tb4.Text[i] < 48 || tb4.Text[i] > 57)
                 {
                     MessageBox.Show("EROR PRICE");
                     t = false;
                     break;
                 }
             if (t) {
-                emp.price = double.Parse(tb4.Text);
+                emp.price = Int32.Parse(tb4.Text);
                 emp.adress = tb5.Text;
                 employers.Add(emp);
                 all.Items.Refresh(); 
@@ -65,7 +65,7 @@ namespace WpfApp13
                     }
                 if (t)
                 {
-                    emp.price = double.Parse(tb4.Text);
+                    emp.price = Int32.Parse(tb4.Text);
                     emp.adress = tb5.Text;
                     employers[ind] = emp;
                     all.Items.Refresh();
@@ -87,14 +87,14 @@ namespace WpfApp13
             {
 
             }
-            public Product(string a, double b, string c)
+            public Product(string a, int b, string c)
             {
                 name = a;
                 price = b;
                 adress = c;
             }
             public string name;
-            public double price;
+            public int price;
             public string adress;
             public override string ToString() { return $"{name} {price} грн {adress}"; }
         }
